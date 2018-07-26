@@ -507,9 +507,7 @@ ACPI_GLOBAL (BOOLEAN,               AcpiGbl_SystemAwakeAndRunning);
     Prototype;
 
 #else
-#define ACPI_DBG_DEPENDENT_RETURN_VOID(Prototype) \
-    static ACPI_INLINE Prototype {return;}
-
+#define ACPI_DBG_DEPENDENT_RETURN_VOID(Prototype)
 #endif /* ACPI_DEBUG_OUTPUT */
 
 
@@ -525,9 +523,7 @@ ACPI_GLOBAL (BOOLEAN,               AcpiGbl_SystemAwakeAndRunning);
     Prototype;
 
 #else
-#define ACPI_APP_DEPENDENT_RETURN_VOID(Prototype) \
-    static ACPI_INLINE Prototype {return;}
-
+#define ACPI_APP_DEPENDENT_RETURN_VOID(Prototype)
 #endif /* ACPI_APPLICATION */
 
 
