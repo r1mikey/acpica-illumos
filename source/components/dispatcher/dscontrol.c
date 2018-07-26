@@ -469,12 +469,14 @@ AcpiDsExecEndControlOp (
 
     case AML_BREAKPOINT_OP:
 
+#ifdef ACPI_DEBUGGER
         AcpiDbSignalBreakPoint (WalkState);
 
         /* Call to the OSL in case OS wants a piece of the action */
 
         Status = AcpiOsSignal (ACPI_SIGNAL_BREAKPOINT,
             "Executed AML Breakpoint opcode");
+#endif
         break;
 
     case AML_BREAK_OP:
