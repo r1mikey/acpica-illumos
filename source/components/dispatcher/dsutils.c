@@ -754,7 +754,9 @@ AcpiDsCreateOperand (
             return_ACPI_STATUS (Status);
         }
 
+#ifdef ACPI_DEBUGGER
         AcpiDbDisplayArgumentObject (ObjDesc, WalkState);
+#endif
     }
     else
     {
@@ -835,7 +837,9 @@ AcpiDsCreateOperand (
             return_ACPI_STATUS (Status);
         }
 
+#ifdef ACPI_DEBUGGER
         AcpiDbDisplayArgumentObject (ObjDesc, WalkState);
+#endif
     }
 
     return_ACPI_STATUS (AE_OK);
